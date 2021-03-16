@@ -40,4 +40,4 @@ jobs:
         key: ${{ secrets.ID_RSA }}
         script: |
           cd /home/ubuntu/libs
-          java & gymnotes-0.0.1-SNAPSHOT.jar
+          java -jar gymnotes-0.0.1-SNAPSHOT.jar &
