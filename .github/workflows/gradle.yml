@@ -28,10 +28,10 @@ jobs:
         DEPLOY_KEY: ${{ secrets.ID_RSA }} # 引用配置，SSH私钥
         ARGS: -avz --delete --exclude='*.pyc' # rsync参数，排除.pyc文件
         SERVER_PORT: '22' # SSH端口
-        FOLDER: ./build/labs/* # 要推送的文件夹，路径相对于代码仓库的根目录
+        FOLDER: ./build/libs/* # 要推送的文件夹，路径相对于代码仓库的根目录
         SERVER_IP: ${{ secrets.SSH_HOST }} # 引用配置
         USERNAME: ${{ secrets.SSH_USERNAME }} # 引用配置，服务器登录名
-        SERVER_DESTINATION: /home/ubuntu/labs/ # 部署到目标文件夹
+        SERVER_DESTINATION: /home/ubuntu/libs/ # 部署到目标文件夹
     - name: Restart server # 重启服务
       uses: appleboy/ssh-action@master
       with:
@@ -39,5 +39,5 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.ID_RSA }}
         script: |
-          cd /home/ubuntu/labs
+          cd /home/ubuntu/libs
           java & gymnotes-0.0.1-SNAPSHOT.jar
