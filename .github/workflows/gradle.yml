@@ -39,5 +39,5 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.ID_RSA }}
         run: |
-          cd /home/ubuntu/libs
-          ./mybash.sh
+            cd /home/ubuntu/libs
+            ./mybash.sh
