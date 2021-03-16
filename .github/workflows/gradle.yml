@@ -38,6 +38,6 @@ jobs:
         host: ${{ secrets.SSH_HOST }} 
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.ID_RSA }}
-        run: |
-            cd /home/ubuntu/libs
-            ./mybash.sh
+        script: |
+          cd /home/ubuntu/libs
+          ./mybash.sh
