@@ -38,7 +38,7 @@ jobs:
         host: ${{ secrets.SSH_HOST }} 
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.ID_RSA }}
-        run: |
+        script: |
           cd /home/ubuntu/libs
           ./mybash.sh
         # mybash.sh 第一个参数为jar包名称 不写默认为gymnotes-0.0.1-SNAPSHOT.jar
