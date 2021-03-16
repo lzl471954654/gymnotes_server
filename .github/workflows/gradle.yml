@@ -40,5 +40,5 @@ jobs:
         key: ${{ secrets.ID_RSA }}
         script: |
           cd /home/ubuntu/libs
-          echo success > success
+          ./mybash.sh
     # java -jar gymnotes-0.0.1-SNAPSHOT.jar &
