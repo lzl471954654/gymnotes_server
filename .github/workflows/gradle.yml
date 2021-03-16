@@ -41,4 +41,4 @@ jobs:
         script: |
           cd /home/ubuntu/libs
           ./mybash.sh
-    # java -jar gymnotes-0.0.1-SNAPSHOT.jar &
+        # mybash.sh 第一个参数为jar包名称 不写默认为gymnotes-0.0.1-SNAPSHOT.jar
