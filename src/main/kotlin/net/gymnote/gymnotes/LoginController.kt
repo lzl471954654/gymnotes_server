@@ -12,6 +12,6 @@ class LoginController {
 
     @RequestMapping("/login")
     fun login(user: User): String? {
-        return user.toString() + "lzl sb"
+        return user.toString() + "test"
     }
 }
