@@ -32,7 +32,7 @@ jobs:
         SERVER_IP: ${{ secrets.SSH_HOST }} # 引用配置
         USERNAME: ${{ secrets.SSH_USERNAME }} # 引用配置，服务器登录名
         SERVER_DESTINATION: /home/ubuntu/libs/ # 部署到目标文件夹
-    - name: ssh server
+    - name: Restart server #重启服务
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }} 
