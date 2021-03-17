@@ -39,4 +39,4 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.ID_RSA }}
         # mybash.sh 第一个参数指定包名称 第二参数有值则只关闭服务
-        script: . /home/ubuntu/libs/mybash.sh
+        script: . /home/ubuntu/libs/mybash.sh  >/dev/null 2>&1 &
