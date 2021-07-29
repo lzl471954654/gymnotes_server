@@ -8,6 +8,7 @@ class GymnotesApplicationTests {
 
 	@Test
 	fun contextLoads() {
+		
 	}
 
 }
